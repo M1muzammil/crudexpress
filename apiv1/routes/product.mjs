@@ -12,14 +12,14 @@ let products = [
 router.post('/product', (req, res, next) => {
 
     if (
-        !req.body.productname
+        !req.body.product
         || !req.body.price
     ) {
         res.status(403);
         res.send(`required parameters missing, 
         example request body:
         {
-            productname: "abc product productname",
+            product: "abc product product",
             price: "some product price"
         } `);
         return;
@@ -27,7 +27,7 @@ router.post('/product', (req, res, next) => {
 
     products.push({
         id: nanoid(),
-        productname: req.body.productname,
+        product: req.body.product,
         price: req.body.price,
     })
 
@@ -82,14 +82,14 @@ router.put('/product/:productId', (req, res, next) => {
   
     // If the product with the given ID exists, update it
     if (productIndex !== -1) {
-      // Check if both productname and price are provided in the request body
-      if (!req.body.productname || !req.body.price) {
-        res.status(403).send('productname and price are required for updating a product');
+      // Check if both product and price are provided in the request body
+      if (!req.body.product || !req.body.price) {
+        res.status(403).send('product and price are required for updating a product');
         return;
       }
   
       // Update the product with the new data
-      products[productIndex].productname = req.body.productname;
+      products[productIndex].product = req.body.product;
       products[productIndex].price = req.body.price;
   
       res.send('product updated');
