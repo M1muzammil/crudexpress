@@ -20,7 +20,7 @@ function submitProduct() {
     price: price.value,
   })
     .then(function (response) {
-      alert("Product added");
+      // alert("Product added");
       renderproduct();
     })
     .catch(function (error) {
@@ -114,7 +114,7 @@ function editproduct(productId) {
         price: editedPrice,
       })
         .then(function (response) {
-          alert("Product updated");
+          // alert("Product updated");
           renderproduct();
         })
         .catch(function (error) {
@@ -130,7 +130,7 @@ function editproduct(productId) {
 function deleteproduct(productId) {
   axios.delete(`/api/v1/product/${productId}`)
     .then(function (response) {
-      alert("Product deleted");
+      // alert("Product deleted");
       renderproduct();
     })
     .catch(function (error) {

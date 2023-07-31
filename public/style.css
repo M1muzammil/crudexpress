@@ -1,6 +1,6 @@
 body{
-    color: rgb(214, 79, 79);
-    background-color: black;
+    color:yellow;
+    background-color: rgb(11, 11, 11);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,8 +9,8 @@ body{
 input{
 
 margin: 1em;
-background-color: #322424;
-color: red;
+background-color: #020202;
+color: rgb(209, 251, 22);
 
 
 
